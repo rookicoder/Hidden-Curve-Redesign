@@ -1,0 +1,350 @@
+/*10/25/24*/
+
+/* CSS Styles for HIDDENCURVE Website */
+
+/* Reset default browser styles and set up basic page structure */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide the default cursor */
+body {
+    cursor: none; /* Hides the default cursor */
+    font-family: 'Outfit', sans-serif;
+    background-color: transparent;
+    color: #000000;
+    overflow-x: hidden;
+}
+
+/* Style the custom cursor */
+#custom-cursor {
+    position: fixed;
+    width: 52px; /* Increased size to 2x */
+    height: 52px;
+    background-color: black;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+/* Style the top bar of the website */
+#top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    font-weight: bold;
+}
+
+/* Windmill Overlay Styles */
+#windmill-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Positioned behind text content */
+    pointer-events: none; /* Allow interactions with underlying elements */
+}
+
+#windmill-svg {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    opacity: 0.5; /* Adjust for desired visibility */
+}
+
+/* General section styling */
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent; /* Make sections transparent */
+    z-index: 5; /* Higher than windmill, lower than top-bar */
+}
+
+/* Hero section specific styles */
+#hero {
+    position: relative;
+}
+
+/* 3D title container styles */
+#three-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Mission section styles */
+#mission {
+    background-color: rgba(248, 248, 248, 0.8);
+}
+
+/* Styles for the shape-changing box in the mission section */
+#shape-changing-box {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000000;
+    padding: 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 10; /* Ensure text is above windmill */
+    transition: all 0.5s ease;
+    border: 2px solid #000000;
+}
+
+/* Customer section styles */
+#customers {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styles for the customer testimonial slider */
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Philosophy section styles */
+#philosophy {
+    background-color: rgba(248, 248, 248, 0.8);
+}
+
+/* Styles for the color-changing text in the philosophy section */
+#color-changing-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10; /* Ensure text is above windmill */
+    position: relative;
+}
+
+/* Services section styles */
+#services {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styles for the grid of service cards */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1600px;
+}
+
+/* Individual service card styles */
+.service-card {
+    background-color: rgba(248, 248, 248, 0.9);
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    width: 300px;
+    z-index: 10; /* Ensure cards are above windmill */
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000000;
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service-card li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+/* Quote request section styles */
+#request-quote {
+    background-color: rgba(248, 248, 248, 0.8);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#request-quote h2,
+#request-quote p,
+#quote-form {
+    position: relative;
+    z-index: 10; /* Ensure content is above windmill */
+}
+
+/* Styles for the quote form */
+#quote-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#quote-form .form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#quote-form input,
+#quote-form textarea {
+    flex: 1;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#quote-form textarea {
+    width: 100%;
+    min-height: 150px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #000000;
+    z-index: 10;
+    position: relative;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: 1.2rem;
+    z-index: 5;
+    position: relative;
+}
+
+/* Button styles */
+.btn {
+    padding: 1rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333333;
+}
+
+/* Styles for decorative shapes */
+.shape {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.circle {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.square {
+    width: 250px;
+    height: 250px;
+    background-color: #000000;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 260px solid #000000;
+}
+
+/* Responsive design adjustments for different screen sizes */
+@media (max-width: 1200px) {
+    #shape-changing-box {
+        font-size: 1.6rem;
+    }
+
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #quote-form {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #shape-changing-box {
+        font-size: 1.4rem;
+    }
+
+    .swiper-slide {
+        width: 300px;
+        height: 300px;
+    }
+
+    #quote-form .form-group {
+        flex-direction: column;
+    }
+
+    #quote-form input,
+    #quote-form textarea {
+        width: 100%;
+    }
+}
