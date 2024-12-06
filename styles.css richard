@@ -1,0 +1,46 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent actual scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Lock height to viewport */
+    background: #3498db; /* Start with Services color */
+    transition: background 1s ease-in-out; /* Smooth background transition */
+}
+
+.section-content {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+    opacity: 0; /* Set initial opacity for hidden text */
+}
+
+/* Initially visible "Our Services" text */
+#services-text {
+    opacity: 1; /* Only "Our Services" is visible initially */
+}
+
+/* Transition background and text visibility */
+.fade-background {
+    background-color: #2ecc71 !important; /* Switch to "Request a Quote" color */
+}
+
+.fade-out {
+    opacity: 0 !important; /* Text fades out completely */
+}
+
+.fade-in {
+    opacity: 1 !important; /* Text fades in fully */
+}
