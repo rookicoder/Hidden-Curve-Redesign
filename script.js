@@ -1,5 +1,3 @@
-//10/25/24
-
 // HIDDENCURVE Website JavaScript
 
 // Set up GSAP (GreenSock Animation Platform) for smooth animations
@@ -219,23 +217,96 @@ gsap.from('.swiper-container', {
     ease: 'power2.out',
 });
 
-// 5. Philosophy text animation
-const philosophyText = document.getElementById('color-changing-text');
-const words = philosophyText.textContent.split(' ');
-philosophyText.innerHTML = words.map((word) => `<span>${word}</span>`).join(' ');
+// 5. Philosophy section animations
+function animatePhilosophySection() {
+  const section = document.getElementById('philosophy');
+  const heading = section.querySelector('h2');
+  const textContainer = document.getElementById('color-changing-text');
+  const shapes = section.querySelectorAll('.shape');
 
-gsap.from('#color-changing-text span', {
+  // Split text into words
+  const text = textContainer.innerHTML;
+  const words = text.split(' ');
+  textContainer.innerHTML = words.map(word => `<span>${word}</span>`).join(' ');
+  const spans = textContainer.querySelectorAll('span');
+
+  // Heading animation
+  gsap.from(heading, {
+    opacity: 0,
+    y: 50,
+    duration: 1,
     scrollTrigger: {
-        trigger: '#philosophy',
-        start: 'top center',
+      trigger: section,
+      start: "top 80%",
     },
-    // Animate each word in the philosophy text
+  });
+
+  // Text animation
+  gsap.from(spans, {
     opacity: 0,
     y: 20,
-    stagger: 0.05,
     duration: 0.5,
+    stagger: 0.02,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 60%",
+    },
+  });
+
+  // Shapes animation
+  gsap.from(shapes, {
+    scale: 0,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: section,
+      start: "top 60%",
+    },
+  });
+
+  // Staggered fade-out effect for shapes
+  gsap.to(shapes, {
+    opacity: 0,
+    y: -50,
+    stagger: 0.1,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: section,
+      start: "bottom 80%",
+      end: "bottom 20%",
+      scrub: true,
+    },
+  });
+
+  // Reveal effect for the next section (services)
+  const servicesSection = document.getElementById('services');
+  gsap.from(servicesSection, {
+    opacity: 0,
+    y: 100,
+    duration: 1,
     ease: 'power2.out',
-});
+    scrollTrigger: {
+      trigger: servicesSection,
+      start: "top 80%",
+      end: "top 20%",
+      scrub: true,
+    },
+  });
+
+
+  // Modify the existing transition animation to be more subtle
+  gsap.to(section, {
+    yPercent: -15, // Changed from -30 to -15 for a more subtle effect
+    opacity: 0,
+    scrollTrigger: {
+      trigger: section,
+      start: "bottom 80%",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+}
 
 // 6. Services cards animation
 gsap.from('.service-card', {
@@ -369,3 +440,12 @@ shapes.forEach((shape, index) => {
         });
     }
 });
+
+// Initialize animations
+function initAnimations() {
+  animatePhilosophySection();
+  // You can add other section animations here as well
+}
+
+// Call initAnimations when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initAnimations);
