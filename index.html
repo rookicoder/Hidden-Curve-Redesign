@@ -1,168 +1,23 @@
- <!-- 10/25/24 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIDDENCURVE - Elevate Your Digital Presence</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Scroll-Triggered Text Transition</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="top-bar">Make a mark of your Presence</div>
 
-    <!-- Windmill Overlay -->
-    <div id="windmill-overlay">
-        <!-- Windmill SVG -->
-        <svg id="windmill-svg" viewBox="0 0 200 200">
-            <!-- Windmill Blades -->
-            <g id="windmill-blades" transform="translate(100,100)">
-                <path d="M0,0 L0,-80 L20,-100 L0,-120 L-20,-100 Z" fill="#777"></path>
-                <path d="M0,0 L80,0 L100,-20 L120,0 L100,20 Z" fill="#999"></path>
-                <path d="M0,0 L0,80 L-20,100 L0,120 L20,100 Z" fill="#bbb"></path>
-                <path d="M0,0 L-80,0 L-100,20 L-120,0 L-100,-20 Z" fill="#ddd"></path>
-            </g>
-            <!-- Windmill Center -->
-            <circle cx="100" cy="100" r="10" fill="#333"></circle>
-        </svg>
+    <!-- Our Services Text -->
+    <div id="services-text" class="section-content">
+        Our Services
     </div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero" class="section">
-            <div id="three-container"></div>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
+    <!-- Request a Quote Text -->
+    <div id="quote-text" class="section-content">
+        Request a Quote
+    </div>
 
-        <!-- Mission Section -->
-        <section id="mission" class="section">
-            <div id="shape-changing-box">
-                <p>We believe that every business has a hidden curve for growth which can be achieved through the strategic power of branding and marketing.</p>
-            </div>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
-
-        <!-- Customers Section -->
-        <section id="customers" class="section">
-            <h2>Our Customers</h2>
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="https://cdn.discordapp.com/attachments/880257520596320267/1299459792313520261/image.png?ex=671d47bd&is=671bf63d&hm=a61143e86f4d52c138ca33b619a615f405aa14a752bf55279985450faa290c85&" alt="Customer 1">
-                        <p>VDart Group</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://cdn.discordapp.com/attachments/880257520596320267/1299459149255413760/Edwin.png?ex=671d4723&is=671bf5a3&hm=74819bbff5bbc40c1a676a70bb27aa23deb03e6fedacc7a749837cc2235cf4f6&" alt="Customer 2">
-                        <p>Edwin Cordero D.C., FICA</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://cdn.discordapp.com/attachments/880257520596320267/1299460002024525914/image.png?ex=671d47ef&is=671bf66f&hm=023b3206e7fc34d80e7e3cdb960ba2e3447a41c37dc85e3e95a36bcd7e23926e&" alt="Customer 3">
-                        <p>Sidd Ahmed</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://cdn.discordapp.com/attachments/880257520596320267/1299460156311994378/image.png?ex=671d4814&is=671bf694&hm=eae9eec091b2b2011339af91b171337c7ef04888b33deedb439d03167f8e78de&" alt="Customer 4">
-                        <p>MaxLiving Inc</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="https://cdn.discordapp.com/attachments/880257520596320267/1299460299870572647/image.png?ex=671d4836&is=671bf6b6&hm=b1578b97a90f51081ecc7396d80740650fe96721708aea30ee1412ad79a70bde&" alt="Customer 5">
-                        <p>QDOT Inc</p>
-                    </div>
-                </div>
-            </div>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
-
-        <!-- Philosophy Section -->
-        <section id="philosophy" class="section">
-            <h2>Our Philosophy</h2>
-            <p id="color-changing-text">
-                At Hidden Curve, we understand that building a brand means cultivating a community of loyal supporters. Audiences are discerning and resistant to overt sales tactics. We recognize that branding is about reputation, marketing drives sales, and advertising seeks attention. Each of these elements has a distinct purpose, space, and strategy, and while they are not interchangeable, they collectively influence your revenue.
-            </p>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="section">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Ideation</h3>
-                    <ul>
-                        <li>Brand Strategy</li>
-                        <li>Customer Experience Strategy</li>
-                        <li>Content Strategy</li>
-                        <li>Research</li>
-                        <li>Measurement and Reporting</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Creation</h3>
-                    <ul>
-                        <li>Responsive Web</li>
-                        <li>Experience Design</li>
-                        <li>Brand Identity and Naming</li>
-                        <li>Content Production</li>
-                        <li>Post-Production</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <h3>Implementation</h3>
-                    <ul>
-                        <li>Campaign Development</li>
-                        <li>Social and Influencer Marketing</li>
-                        <li>Full Stack Development</li>
-                        <li>Testing and Optimization</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
-
-        <!-- Request a Quote Section -->
-        <section id="request-quote" class="section">
-            <h2>Request a Quote</h2>
-            <p>We're ready to build your dream brand. We promise a client-centric approach that empowers ideas, eases concerns, and delivers quality value we'll all be proud of. Dare to try something different.</p>
-            <form id="quote-form">
-                <div class="form-group">
-                    <input type="text" name="first-name" placeholder="First Name" required>
-                    <input type="text" name="last-name" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone">
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Message" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send</button>
-            </form>
-            <div class="shape circle"></div>
-            <div class="shape square"></div>
-            <div class="shape triangle"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 HIDDENCURVE. All rights reserved.</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
